@@ -271,26 +271,26 @@
     });
   </script>
   <!-- Código para inicializar el visor 360 (código existente) -->
-   
-<script>
-  // Función para cerrar el overlay manualmente
-  function closeFlyer() {
-    const overlay = document.getElementById('flyer-overlay');
-    if (overlay) {
-      overlay.style.display = 'none';
+
+  <script>
+    // Función para cerrar el overlay manualmente
+    function closeFlyer() {
+      const overlay = document.getElementById('flyer-overlay');
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
     }
-  }
 
-  // Función para redirigir a la URL del sorteo cuando se clickea el contenedor
-  function redirectToPromo() {
-    window.location.href = "https://www.dondeseria.com/sorteo/design_bn77.html";
-  }
+    // Función para redirigir a la URL del sorteo cuando se clickea el contenedor
+    function redirectToPromo() {
+      window.location.href = "https://www.dondeseria.com/sorteo/design_bn77.html";
+    }
 
-  // Cierra el flyer automáticamente después de 3 segundos (3000 milisegundos)
-  window.addEventListener('load', function() {
-    setTimeout(closeFlyer, 3000);
-  });
-</script>
+    // Cierra el flyer automáticamente después de 3 segundos (3000 milisegundos)
+    window.addEventListener('load', function () {
+      setTimeout(closeFlyer, 3000);
+    });
+  </script>
 
   <script type="importmap">
     {
@@ -382,8 +382,8 @@
           id: 'nodo5',
           panorama: `${baseUrl}5.jpg`,
           thumbnail: `${baseUrl}5.jpg`,
-          name: 'Box de CrossFit',
-          caption: 'Box de CrossFit',
+          name: 'Mutant Family',
+          caption: 'Mutant Family',
           links: [
             { nodeId: 'nodo4', position: { yaw: 3.080116595154185, pitch: -0.09046954013805086 } },
             { nodeId: 'nodo6', position: { yaw: 4.831454369331677, pitch: -0.060706026886776066 } },
@@ -395,8 +395,19 @@
           id: 'nodo6',
           panorama: `${baseUrl}6.jpg`,
           thumbnail: `${baseUrl}6.jpg`,
-          name: 'Box de CrossFit',
-          caption: 'Box de CrossFit',
+          name: 'Mutant Family',
+          markers: [
+    {
+      id: 'marker-image-nodo2',
+      imageLayer: '../mancuerna.png',  // Ruta a tu imagen (puede ser relativa)
+      position: { yaw: 1.5, pitch: 0 },  // Ajusta los valores según donde lo quieras posicionar
+      size: { width: 602, height: 522 },     // Tamaño del marker
+      // anchor y rotation se pueden agregar si es necesario, por ejemplo:
+      // anchor: { x: 0.5, y: 0.5 },
+      // rotation: 45
+    }
+  ],
+          caption: 'Mutant Family',
           links: [
             { nodeId: 'nodo5', position: { yaw: 0.25711695350968766, pitch: 0.05388186045526577 } },
             { nodeId: 'nodo8', position: { yaw: 1.8542815194572144, pitch: -0.04934416619038107 } },
@@ -408,8 +419,8 @@
           id: 'nodo7',
           panorama: `${baseUrl}7.jpg`,
           thumbnail: `${baseUrl}7.jpg`,
-          name: 'Box de CrossFit',
-          caption: 'Box de CrossFit',
+          name: 'Mutant Family',
+          caption: 'Mutant Family',
           links: [
             { nodeId: 'nodo4', position: { yaw: 2.3352431872853963, pitch: -0.30626368923732805 } },
             { nodeId: 'nodo8', position: { yaw: 0.44016107980393115, pitch: -0.2113516646625846 } },
